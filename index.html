@@ -1,12 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тестовый проект для проверки</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style — копия.css" />
+  <title>Pokemon reference</title>
 </head>
+
 <body>
-    <h1>Это итоговый проект <br>Иванова Ивана!</h1>
+<header>
+  <div class="header-bg">
+    <nav>
+      <ul class="catalog">
+        <li><a href="home.html" target="content-frame"><span>Каталог 0</span></a></li>
+        <li><a href="catalog1.html" target="content-frame"><span>Каталог 1</span></a></li>
+        <li><a href="catalog2.html" target="content-frame"><span>Каталог 2</span></a></li>
+        <li><a href="catalog3.html" target="content-frame"><span>Каталог 3</span></a></li>
+        <li><a href="catalog4.html" target="content-frame"><span>Каталог 4</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="main-content-wrapper">
+    <div class="content-area">
+
+      <!-- Стартовая главная страница показывается внутри iframe -->
+      <iframe
+        class="content-frame"
+        name="content-frame"
+        src="home.html"
+        title="Контент"
+      ></iframe>
+
+    </div>
+
+    <aside class="sidebar">
+      <h2>Что такое покемоны и карточки?</h2>
+      <p>
+        <b>Покемоны</b> — вымышленные существа из франшизы Pokémon. Идея — ловить,
+        тренировать и сражаться покемонами.
+      </p>
+      <p>
+        <b>Коллекционные карточки Pokémon (TCG)</b> — игра и коллекционирование:
+        вы собираете колоды из карточек покемонов, тренеров и энергий, чтобы
+        сражаться с другими игроками.
+      </p>
+      <p>
+        Франшиза Pokémon существует с <b>1996 года</b> (первые игры в Японии).
+        Карточная игра Pokémon TCG появилась позже — в конце 1990‑х.
+      </p>
+      <p>
+        Основные “классы” (типы) покемонов в играх/TCG: <b>Electric</b>,
+        <b>Water</b>, <b>Fire</b>, <b>Grass</b>, <b>Psychic</b>, <b>Fighting</b>,
+        <b>Dark</b>, <b>Metal</b>, <b>Dragon</b>, <b>Fairy</b> (в TCG сейчас
+        часть типов объединяют/меняют, но смысл — разные стихии и слабости).
+      </p>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-content">
+      <img src="img/pokeball.png" alt="Pokeball" class="footer-icon" />
+      <div>
+        <p>Данные</p>
+        <h5 class="footer-date">2026 — учебный проект</h5>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
