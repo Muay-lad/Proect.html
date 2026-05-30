@@ -1,0 +1,189 @@
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #383838;
+  background-image: url('images.jpg');
+}
+
+/* Шапка */
+.header-bg{
+  background-image: url('Pokemon-Widescreen123456.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 200px;
+  display: flex;
+  align-items: flex-end;
+  border-bottom: 8px solid rgb(72, 185, 255);
+}
+
+/* Меню */
+.catalog{
+  background: rgba(0,0,0,0.7);
+  padding: 15px 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.catalog li{ margin: 0 10px; }
+.catalog li a{
+  display: inline-block;
+  padding: 8px 18px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+
+  transform: skew(-30deg);
+  transition: transform 0.3s ease, background 0.2s;
+}
+.catalog li a span{
+  display: inline-block;
+  transform: skew(30deg);
+}
+.catalog li a:hover{
+  background: rgba(72, 185, 255, 0.4);
+  transform: skew(-20deg) scale(1.05);
+}
+
+/* Основная раскладка: контент + сайдбар */
+main{ padding: 20px; }
+.main-content-wrapper{
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.content-area{ flex: 3; }
+.sidebar{
+  flex: 1;
+  background: rgba(255,255,255,0.85);
+  padding: 20px;
+  border-radius: 10px;
+  height: fit-content;
+}
+.sidebar h2{
+  margin-top: 0;
+  border-bottom: 2px solid rgb(72, 185, 255);
+  padding-bottom: 10px;
+}
+
+/* iframe */
+.content-frame{
+  width: 100%;
+  min-height: 700px;
+  border: 0;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.0);
+}
+
+/* Страницы внутри iframe */
+.page{
+  margin: 0;
+  padding: 16px;
+  background: transparent;
+}
+.page-title{
+  margin: 0 0 12px 0;
+  color: #fff;
+}
+.lead{
+  color: #eaeaea;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+}
+
+/* Главные плитки (home.html) */
+.tiles{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 18px;
+}
+.tile{
+  display: block;
+  text-decoration: none;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px;
+  color: #222;
+}
+.tile h3{ margin: 10px 0 0 0; }
+
+/* Общая сетка карточек (каталог 1 и 2) */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr));
+  gap: 16px;
+}
+.card{
+  background: rgba(255,255,255,0.95);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 12px;
+}
+.card h3{ margin: 10px 0 6px; }
+.meta{ margin: 0; color: #555; font-size: 14px; line-height: 1.4; }
+
+/* Контейнер картинки + увеличение при наведении */
+.card-img, .tile-img, .cute-img{
+  overflow: hidden;
+  border-radius: 8px;
+}
+.card-img img, .tile-img img, .cute-img img{
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+.card-img:hover img,
+.tile-img:hover img,
+.cute-img:hover img{
+  transform: scale(1.15);
+}
+
+/* Правила */
+.rules{
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+/* Купить */
+.buy-buttons{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+.btn{
+  display: inline-block;
+  padding: 10px 16px;
+  background: rgb(72, 185, 255);
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+}
+.btn:hover{ filter: brightness(1.05); }
+
+/* Футер */
+footer{
+  background-color: #000;
+  color: white;
+  padding: 20px 0;
+  border-top: 8px solid rgb(72, 185, 255);
+}
+.footer-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-content{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.footer-icon{ width: 50px; height: 50px; }
+.footer-date{ color: #888; margin: 10px 0 0 0; font-weight: normal; }
